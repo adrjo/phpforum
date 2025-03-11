@@ -1,0 +1,39 @@
+---Minitwitter---
+
+Formulär där man fyller i text eventuellt bifogar bild eller fil.
+OM ingen inloggning => fyller i namn, OM inget namn fylls i användarnamn = Anonym.
+Ingen förstasida, förstasidan är där alla posts finns och där man skriver sin post.
+
+Begränsa antal posts per sida. *done
+Begränsa längd på text per post. *done
+
+Man skall kunna gilla en post. *kinda done
+Man skall kunna svara på en post.
+Man skall kunna gilla svaret.
+Man skall kunna sortera posts med mest gillningar, mest svar, och senast postat.
+Man skall kunna ändra / ta bort sin post efter den blivit postad. (kanske inte eftersom användare behövs).
+
+// En användare fyller i namn, skriver lite text och bifogar en bild. Namn och text sparas i databasen, bilden får ett nytt namn och sparas i en mapp, namnet på bilden sparas i databasen.
+
+// Kod i text:
+Direkt då man går in på sidan så kan man se de 15 senaste posterna sorterad senast längst upp. Detta görs med SQL SELECT. När man klickar på skicka post sparas allt på databasen med hjälp av en SQL INSERT into `posts`. Då man klickar på gilla läggs det till en.
+Klickar man på kommentera öppnas posten i en ny flik där en ny formulär finns
+Kommentarer på poster ges ännu ett id som länkar till den post den kommenterar på.
+
+
+- Databas
+
+--Post
+post_id
+post_text
+post_user
+post_likes
+date
+file_name
+
+
+---
+--Användare
+Användarnamn
+Lösenord
+(Förnamn Efternamn?)
